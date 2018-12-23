@@ -22,11 +22,11 @@
 
     </android.support.v7.widget.RecyclerView>
 
-    <Button
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/ajustesBoton2"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:background="@drawable/engranajes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/engranajes"
         android:layout_margin="30dp"
         android:layout_alignParentLeft="true"
         android:layout_alignBottom="@+id/alarm_List"
@@ -35,7 +35,7 @@
         <DigitalClock
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="50dp"
+            android:textSize="62dp"
             android:id="@+id/RelojView"
             android:textColor="#000000"
             android:fontFamily="serif-monospace"
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="@color/colorPrimaryDark"
+        app:backgroundTint="@color/colorAccent"
         android:layout_alignBottom="@id/alarm_List"
         android:layout_alignParentRight="true"/>
 

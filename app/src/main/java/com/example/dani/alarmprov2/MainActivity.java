@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.List;
 
@@ -33,6 +34,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        findViewById(R.id.ajustesBoton2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AjustesActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         AlarmaViewModel alarmaViewModel = ViewModelProviders.of(this).get(AlarmaViewModel.class);
         alarmaViewModel.getAlarmas().observe(this, new Observer<List<Alarma>>() {

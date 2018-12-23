@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FaqsActivity"
+    android:background="@color/colorPrimaryDark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pregunta1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="*¿Cómo configurar la hora de una alarma?"
+            android:textSize="20dp"
+            android:layout_margin="8dp"
+            />
+
+        <TextView
+            android:id="@+id/respuesta1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pregunta1"
+            android:text="-Pulsando el botón que indica la hora programada."
+            android:textSize="15dp"
+            android:layout_margin="8dp"
+            />
+
+        <TextView
+            android:id="@+id/pregunta2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="*¿Cómo activo o desactivo una alarma?"
+            android:textSize="20dp"
+            android:layout_margin="8dp"
+            />
+
+        <TextView
+            android:id="@+id/respuesta2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-Activando o desactivando el interruptor de la alarma"
+            android:textSize="15dp"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="*¿Cómo Cambio el volumen de la alarma?"
+            android:textSize="20dp"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-El volumen está asociado al volumen de alarmas del dispositivo"
+            android:textSize="15dp"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="*¿Cómo vuelvo a la pantalla anterior?"
+            android:layout_margin="8dp"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-Con la tecla/botón 'back' del dispositivo"
+            android:textSize="15dp"
+            android:layout_margin="8dp"/>
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

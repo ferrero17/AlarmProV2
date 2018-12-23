@@ -17,7 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".NewAlarmActivity" />
-        <activity android:name=".ShowActivity"></activity>
+        <activity android:name=".ShowActivity" />
+        <activity android:name=".ConfiguracionAlarmaActivity" />
+        <activity android:name=".AjustesActivity" />
+        <activity android:name=".FaqsActivity"></activity>
     </application>
 
 </manifest>
