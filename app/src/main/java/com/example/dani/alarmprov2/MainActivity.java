@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(myAdapter);
 
 
+
         findViewById(R.id.new_alarm).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         AlarmaViewModel alarmaViewModel = ViewModelProviders.of(this).get(AlarmaViewModel.class);
         alarmaViewModel.getAlarmas().observe(this, new Observer<List<Alarma>>() {
             @Override
@@ -52,6 +52,26 @@ public class MainActivity extends AppCompatActivity {
                 myAdapter.notifyDataSetChanged();
             }
         });
+
+      /*  Button btnCambiarHora = (Button) findViewById(R.id.botonHoraAlarma1);
+        Intent intent = getIntent();
+        String hora_alarma;
+
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            if(extras == null) {
+                hora_alarma= "0:00";
+            } else {
+                // Recibo el edit textHora desde la PickersActivity
+                hora_alarma= extras.getString("hora");
+            }
+        } else {
+            hora_alarma= (String) savedInstanceState.getSerializable("hora");
+        }
+
+        btnCambiarHora.setText(hora_alarma);*/
+
+
 
     }
 }

@@ -24,7 +24,8 @@
         <activity
             android:name=".SwipeActivity"
             android:label="@string/title_activity_swipe"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PickersActivity"></activity>
     </application>
 
 </manifest>
