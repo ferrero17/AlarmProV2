@@ -9,6 +9,8 @@ import android.widget.EditText;
 
 public class NewAlarmActivity extends AppCompatActivity {
 
+    public String alarmaDadaHora;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,11 +20,27 @@ public class NewAlarmActivity extends AppCompatActivity {
         findViewById(R.id.botonAñadirAlarma).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText editText = findViewById(R.id.editText);
-                String alarmaDada = editText.getText().toString();
+
+                //
+                EditText editText1 = findViewById(R.id.NewAlarmName);
+                String alarmaDadaNombre = editText1.getText().toString();
+
+                EditText editText = findViewById(R.id.et_mostrar_hora_picker);
+
+                if (editText==null){
+                    alarmaDadaHora = "--:--";
+                }else{
+
+                     alarmaDadaHora = editText.getText().toString();
+                }
+
 
                 Alarma alarma = new Alarma();
-                alarma.name = alarmaDada;
+
+
+                    alarma.name = alarmaDadaNombre;
+                    alarma.timePick = alarmaDadaHora;
+
 
                 AlarmaViewModel alarmaViewModel = ViewModelProviders.of(NewAlarmActivity.this).get(AlarmaViewModel.class);
                 alarmaViewModel.insertAlarma(alarma);
@@ -33,7 +51,7 @@ public class NewAlarmActivity extends AppCompatActivity {
         });
 
 
-        findViewById(R.id.botonAjustesRepeticion).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.botonAjustesAlarma2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

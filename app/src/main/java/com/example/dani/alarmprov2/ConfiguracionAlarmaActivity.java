@@ -13,7 +13,7 @@ public class ConfiguracionAlarmaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuracion_alarma);
 
-        Button button = (Button) findViewById(R.id.botonAjustesRepeticion);
+        Button button = (Button) findViewById(R.id.botonAjustesAlarma);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

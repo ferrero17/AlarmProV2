@@ -20,7 +20,7 @@
 
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/AlarmName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Name:"
@@ -39,7 +39,7 @@
             android:layout_margin="8dp"/>
 
         <Button
-            android:id="@+id/botonAjustesRepeticion"
+            android:id="@+id/botonAjustesAlarma"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:background="@drawable/ajustesalarma"
@@ -58,7 +58,7 @@
             android:textSize="15dp" />
 
         <Switch
-            android:id="@+id/switch1"
+            android:id="@+id/switchNewAlarm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/linea1"
@@ -66,13 +66,13 @@
             android:layout_margin="8dp" />
 
         <EditText
-            android:id="@+id/MessageEditText"
+            android:id="@+id/MessageEditTextNewAlarm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Message:"
             android:textSize="15dp"
             android:ems="12"
-            android:layout_below="@id/editText"
+            android:layout_below="@id/AlarmName"
             android:layout_margin="15dp"
             />
 
@@ -81,7 +81,7 @@
             android:layout_width="fill_parent"
             android:layout_height="1dp"
             android:background="@color/colorPrimaryDark"
-            android:layout_below="@id/botonAjustesRepeticion"
+            android:layout_below="@id/botonAjustesAlarma"
             android:orientation="horizontal"
             android:layout_margin="8dp"
             />
@@ -90,7 +90,7 @@
             android:layout_width="fill_parent"
             android:layout_height="1dp"
             android:background="@color/colorPrimaryDark"
-            android:layout_below="@id/MessageEditText"
+            android:layout_below="@id/MessageEditTextNewAlarm"
             android:orientation="horizontal"
             android:layout_margin="8dp"
             />
@@ -99,7 +99,7 @@
             android:layout_width="fill_parent"
             android:layout_height="1dp"
             android:background="@color/colorPrimaryDark"
-            android:layout_below="@id/switch1"
+            android:layout_below="@id/switchNewAlarm"
             android:orientation="horizontal"
             android:layout_margin="8dp"
             />
@@ -110,9 +110,19 @@
             android:layout_height="wrap_content"
             android:textSize="20dp"
             android:layout_below="@id/linea3"
-            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
             android:layout_margin="50dp"
-            android:text="Delete"
+            android:text="borrar"
+            android:backgroundTint="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/botonGuardarCambios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_below="@id/linea3"
+            android:layout_margin="50dp"
+            android:text="guardar"
             android:backgroundTint="@color/colorAccent"/>
 
     </RelativeLayout>

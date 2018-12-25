@@ -2,16 +2,13 @@ package com.example.dani.alarmprov2;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.TimePicker;
+import android.widget.Switch;
 
 import java.util.List;
 
@@ -32,8 +29,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
         Alarma alarma = list.get(i);
 
-       //  myViewHolder.alarmName.setText(alarma.name);
-        // myViewHolder.alarmTimePick.setText(alarma.timePick);
+        myViewHolder.alarmName.setText(alarma.name);
+        myViewHolder.alarmTimePick.setText(alarma.timePick);
 
         //Asignar eventos de los botones:
         myViewHolder.setOnClickListeners();
@@ -54,14 +51,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private TextView alarmName;
-        private TextView alarmTimePick;
+
+        private Switch alarmName;
+        private Button alarmTimePick;
 
         //Declaro los botones que usare en el switch para el OnClick Manual
         Button btnConfiguracionAlarma;
         Button btnModificarHora;
-        Button btnPickTime;
-        EditText PickTime;
 
         //contexto
         Context context;
@@ -72,17 +68,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             super(itemView);
             context = itemView.getContext();
 
-             //alarmName = itemView.findViewById(R.id.switch1);
-             //alarmTimePick = itemView.findViewById(R.id.botonHoraAlarma1);
+            alarmName= itemView.findViewById(R.id.switchNewAlarm);
+            alarmTimePick = itemView.findViewById(R.id.botonHoraAlarma1);
 
-            PickTime = (EditText) itemView.findViewById(R.id.et_mostrar_hora_picker);
 
-            btnConfiguracionAlarma = (Button) itemView.findViewById(R.id.configuracionAlarma);
-            btnModificarHora = (Button) itemView.findViewById(R.id.botonHoraAlarma1);
-          //  btnPickTime = (Button) itemView.findViewById(R.id.botonConfirmarHora);
 
-            //alarmTimePick = itemView.findViewById(R.id.et_mostrar_hora_picker);
-            //alarmTimePick.setText(PickTime.getText().toString());
+             btnConfiguracionAlarma = (Button) itemView.findViewById(R.id.configuracionAlarma);
+             btnModificarHora = (Button) itemView.findViewById(R.id.botonHoraAlarma1);
 
         }
 
@@ -104,13 +96,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                     break;
 
                 case R.id.botonHoraAlarma1:
-                    Intent intent1 = new Intent(context, PickersActivity.class);
+                    Intent intent1 = new Intent(context,PickersActivity.class);
                     context.startActivity(intent1);
                     break;
 
                 case R.id.botonConfirmarHora:
                     Intent intent2 = new Intent(context, MainActivity.class);
-                   // intent2.putExtra("hora", PickTime.getText().toString());
+                    //intent2.putExtra("hora", PickTime.getText().toString());
                     context.startActivity(intent2);
                     break;
 
