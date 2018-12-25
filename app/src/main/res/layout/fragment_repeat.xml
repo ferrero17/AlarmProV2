@@ -159,13 +159,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/flechaizquierda"
-                    android:layout_below="@id/ScrollViewRepeticion"
-                    android:layout_margin="16dp"
-                    android:layout_weight="0.5"/>
+
 
                 <Button
                     android:id="@+id/botonOkeRepeat"
@@ -174,7 +168,7 @@
                     android:text="OK"
                     android:layout_margin="16dp"
                     android:backgroundTint="@color/colorAccent"
-                    android:layout_weight="0.5"/>
+                    android:layout_weight="0.2"/>
 
 
                 <ImageView
@@ -182,7 +176,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/flechaderecha"
                     android:layout_margin="16dp"
-                    android:layout_weight="0.5"
+                    android:layout_weight="1.5"
                     />
 
             </LinearLayout>
