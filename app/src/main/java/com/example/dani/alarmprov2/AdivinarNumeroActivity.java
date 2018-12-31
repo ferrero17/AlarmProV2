@@ -1,6 +1,7 @@
 package com.example.dani.alarmprov2;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -16,9 +17,17 @@ public class AdivinarNumeroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adivinar_numero);
 
+        final MediaPlayer mediaPlayer;
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.galloringtone);
+        mediaPlayer.start();
+        // mediaPlayer.isLooping();
+        mediaPlayer.setLooping(true);
+
+
         final int numeroAleatorio;
         final String numeroAleatorioString;
-       // int numeroCasteado;
+        // int numeroCasteado;
 
         numeroAleatorio = (int) (Math.random() * 100) +1;
         numeroAleatorioString = Integer.toString(numeroAleatorio);
@@ -39,10 +48,7 @@ public class AdivinarNumeroActivity extends AppCompatActivity {
 
                 final EditText numeroElegido = (EditText) findViewById(R.id.respuestaEditTextAdivinar);
 
-                    int numeroCasteado = Integer.parseInt(numeroElegido.getText().toString());
-
-
-
+                   // int numeroCasteado = Integer.parseInt(numeroElegido.getText().toString());
 
                 if (numeroAleatorioString.equals(numeroElegido.getText().toString())){
 
@@ -51,10 +57,26 @@ public class AdivinarNumeroActivity extends AppCompatActivity {
                     toast.setGravity(Gravity.CENTER,0,0);
                     toast.show();
 
+                    mediaPlayer.stop();
+
                     Intent intent = new Intent(AdivinarNumeroActivity.this, MainActivity.class);
                     startActivity(intent);
 
                 }else{
+
+                    int numeroCasteado = 0;
+
+
+                    try{
+
+                        numeroCasteado = Integer.parseInt(numeroElegido.getText().toString());
+
+                    }catch (Exception e){
+
+                        Toast toastError = Toast.makeText(getApplicationContext(), "Introduce sólo números, sin espacio", Toast.LENGTH_SHORT);
+                        toastError.setGravity(Gravity.CENTER,0,0);
+                        toastError.show();
+                    }
 
                     Toast toastMayor = Toast.makeText(getApplicationContext(), "El número es MAYOR!", Toast.LENGTH_SHORT);
                     toastMayor.setGravity(Gravity.CENTER,0,0);

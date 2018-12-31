@@ -1,6 +1,8 @@
 package com.example.dani.alarmprov2;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -11,10 +13,17 @@ import android.widget.Toast;
 
 public class MathProblemsActivity extends AppCompatActivity {
 
+  MediaPlayer mediaPlayer;
+
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_problems);
+
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.campanas);
+        mediaPlayer.start();
 
 
         final EditText resultado = (EditText) findViewById(R.id.respuestaEditText);
@@ -29,9 +38,10 @@ public class MathProblemsActivity extends AppCompatActivity {
                     Toast toast = Toast.makeText(getApplicationContext(), "CORRECTO!", Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER,0,0);
                     toast.show();
-
+                    mediaPlayer.stop();
                     Intent intent = new Intent(MathProblemsActivity.this, MainActivity.class);
                     startActivity(intent);
+
 
                 }else{
 
