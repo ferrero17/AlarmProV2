@@ -32,6 +32,7 @@ public class AlarmaRepository {
         insertAsyncTask(AlarmaDao dao){
             mAsyncTaskDao = dao;
         }
+
         @Override
         protected Void doInBackground(final Alarma... params){
 
@@ -41,6 +42,9 @@ public class AlarmaRepository {
         }
 
     }
+
+
+
 
 
 

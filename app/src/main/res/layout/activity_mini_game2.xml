@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MathProblemsActivity"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/operacionMatematica"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center">
+
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
+            android:progress="20"
+            android:layout_margin="16dp"
+            />
+
+        <Button
+            android:id="@+id/botonPulsame"
+            android:layout_width="134dp"
+            android:layout_height="43dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="127dp"
+            android:layout_marginTop="357dp"
+            android:layout_marginEnd="123dp"
+            android:layout_marginBottom="111dp"
+            android:longClickable="true"
+            android:text="Hold Meee"
+            android:backgroundTint="#b3d10d"/>
+
+        <Button
+            android:id="@+id/botonTap1"
+            android:layout_width="81dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="62dp"
+            android:layout_marginTop="420dp"
+            android:layout_marginEnd="241dp"
+            android:layout_marginBottom="51dp"
+            android:text="TAP"
+            android:backgroundTint="#1dd626"/>
+
+        <Button
+            android:id="@+id/botonTap2"
+            android:layout_width="82dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="248dp"
+            android:layout_marginTop="418dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginBottom="55dp"
+            android:text="TAP"
+            android:backgroundTint="#a92682"/>
+
+        <Button
+            android:id="@+id/botonTap3"
+            android:layout_width="82dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="280dp"
+            android:layout_marginBottom="417dp"
+            android:text="TAP"
+            android:backgroundTint="#ca5612"/>
+
+        <Button
+            android:id="@+id/botonTap"
+            android:layout_width="82dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="258dp"
+            android:layout_marginTop="292dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="181dp"
+            android:text="TAP"
+            android:backgroundTint="#d61d1d"
+            />
+
+        <Button
+            android:id="@+id/botonPulsame2"
+            android:layout_width="wrap_content"
+            android:layout_height="145dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:backgroundTint="#1dcdd6"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="286dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="341dp"
+            android:longClickable="true"
+            android:text="Hold Meee" />
+
+        <Button
+            android:id="@+id/botonPulsame3"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:backgroundTint="#42128b"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="169dp"
+            android:layout_marginEnd="285dp"
+            android:longClickable="true"
+            android:text="Hold Meee" />
+
+
+        <ImageView
+            android:id="@+id/ShakeImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="173dp"
+            android:layout_marginTop="198dp" />
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

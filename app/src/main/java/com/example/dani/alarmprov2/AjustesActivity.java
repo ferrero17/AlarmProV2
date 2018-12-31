@@ -1,12 +1,18 @@
 package com.example.dani.alarmprov2;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 public class AjustesActivity extends AppCompatActivity {
+
+
+    private RelativeLayout loPadre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +27,23 @@ public class AjustesActivity extends AppCompatActivity {
                 startActivityForResult(intent,0);
             }
         });
+
+
+
+//Cambio de Color el fondo de un activity.
+
+        loPadre = (RelativeLayout) findViewById(R.id.ActivityAjustesLayout);
+
+        Button btncambiarAzul = (Button) findViewById(R.id.botonTemaAzul);
+        btncambiarAzul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                loPadre.setBackgroundColor(Color.CYAN);
+
+            }
+        });
+
 
 
     }

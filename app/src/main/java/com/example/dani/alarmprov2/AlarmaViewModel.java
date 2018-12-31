@@ -17,7 +17,6 @@ public class AlarmaViewModel extends AndroidViewModel {
 
         aRepository = new AlarmaRepository(application);
 
-
     }
 
     public void insertAlarma(Alarma alarma){
@@ -25,6 +24,7 @@ public class AlarmaViewModel extends AndroidViewModel {
         aRepository.insert(alarma);
 
     }
+
 
     LiveData<List<Alarma>> getAlarmas(){
 

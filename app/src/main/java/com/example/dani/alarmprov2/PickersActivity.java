@@ -1,6 +1,7 @@
 package com.example.dani.alarmprov2;
 
 import android.app.TimePickerDialog;
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ public class PickersActivity extends AppCompatActivity implements View.OnClickLi
     ImageButton ibObtenerHora;
     Button btnConfirmarHora;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,23 +41,30 @@ public class PickersActivity extends AppCompatActivity implements View.OnClickLi
         //Evento setOnClickListener - clic
         ibObtenerHora.setOnClickListener(this);
 
-        //
-        final EditText horaActualizada = (EditText)findViewById(R.id.et_mostrar_hora_picker);
+        btnConfirmarHora = (Button)findViewById(R.id.botonConfirmarHora);
+        //btnConfirmarHora.setOnClickListener(this);
 
-        Button btnConfirmarhora = (Button) findViewById(R.id.botonConfirmarHora);
+        //
+      // final EditText horaActualizada = (EditText)findViewById(R.id.et_mostrar_hora_picker);
+
+       /* Button btnConfirmarhora = (Button) findViewById(R.id.botonConfirmarHora);
         btnConfirmarhora.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), MainActivity.class);
-                //Paso la hora del edit Text al Main
-                intent.putExtra("hora", etHora.getText().toString());
-                startActivity(intent);
-
+                  //Paso la hora del edit Text al Main
+                  //intent.putExtra("hora", etHora.getText().toString());
+                   // enviarHora(etHora.getText().toString());
+                    startActivity(intent);
             }
-        });
+        });*/
 
 
     }
+
+
+
+
 
     @Override
     public void onClick(View v) {
@@ -63,6 +72,13 @@ public class PickersActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.ib_obtener_hora:
                 obtenerHora();
                 break;
+
+            /*case R.id.botonConfirmarHora:
+                Intent intent = new Intent(v.getContext(), MainActivity.class);
+                //Paso la hora del edit Text al Main
+                intent.putExtra("hora", etHora.getText().toString());
+                startActivity(intent);
+                break;*/
         }
     }
 

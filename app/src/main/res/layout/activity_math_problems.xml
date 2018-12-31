@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MathProblemsActivity"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="50dp"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:id="@+id/operacionMatematica"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24"
+            android:textSize="30dp"
+            android:layout_margin="12dp"
+            android:id="@+id/numeroAtextView"
+            android:textColor="#000000"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="30dp"
+            android:layout_margin="12dp"
+            android:id="@+id/operadorTextView"
+            android:textColor="#000000"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="52"
+            android:textSize="30dp"
+            android:layout_margin="12dp"
+            android:id="@+id/numeroBtextView"
+            android:textColor="#000000"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:textSize="30dp"
+            android:layout_margin="12dp"
+            android:id="@+id/igualTextview"
+            android:textColor="#000000"
+            />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/operacionMatematica"
+        android:layout_margin="16dp"
+        android:ems="3"
+        android:hint="123..."
+        android:layout_centerInParent="true"
+        android:id="@+id/respuestaEditText"
+        android:inputType="number"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/respuestaEditText"
+        android:layout_margin="24dp"
+        android:text="OK"
+        android:id="@+id/botonConfirmarOperacion"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/colorAccent"/>
+
+
+
+</RelativeLayout>

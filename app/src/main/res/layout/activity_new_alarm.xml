@@ -56,7 +56,7 @@
             android:textSize="15dp" />
 
         <Switch
-            android:id="@+id/switchNewAlarm"
+            android:id="@+id/switchVibrationNewAlarm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/linea1"
@@ -97,7 +97,7 @@
             android:layout_width="fill_parent"
             android:layout_height="1dp"
             android:background="@color/colorPrimaryDark"
-            android:layout_below="@id/switchNewAlarm"
+            android:layout_below="@id/switchVibrationNewAlarm"
             android:orientation="horizontal"
             android:layout_margin="8dp"
             />

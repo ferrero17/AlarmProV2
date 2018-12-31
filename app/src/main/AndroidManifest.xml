@@ -25,7 +25,10 @@
             android:name=".SwipeActivity"
             android:label="@string/title_activity_swipe"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".PickersActivity"></activity>
+        <activity android:name=".PickersActivity" />
+        <activity android:name=".MathProblemsActivity" />
+        <activity android:name=".AdivinarNumeroActivity" />
+        <activity android:name=".MiniGame2Activity"></activity>
     </application>
 
 </manifest>

@@ -25,22 +25,9 @@ public class NewAlarmActivity extends AppCompatActivity {
                 EditText editText1 = findViewById(R.id.NewAlarmName);
                 String alarmaDadaNombre = editText1.getText().toString();
 
-                EditText editText = findViewById(R.id.et_mostrar_hora_picker);
-
-                if (editText==null){
-                    alarmaDadaHora = "--:--";
-                }else{
-
-                     alarmaDadaHora = editText.getText().toString();
-                }
-
-
                 Alarma alarma = new Alarma();
 
-
                     alarma.name = alarmaDadaNombre;
-                    alarma.timePick = alarmaDadaHora;
-
 
                 AlarmaViewModel alarmaViewModel = ViewModelProviders.of(NewAlarmActivity.this).get(AlarmaViewModel.class);
                 alarmaViewModel.insertAlarma(alarma);

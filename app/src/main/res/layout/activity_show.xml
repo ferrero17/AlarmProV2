@@ -1,10 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ShowActivity"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+
+    <DigitalClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="62dp"
+        android:id="@+id/RelojViewTest"
+        android:textColor="#000000"
+        android:fontFamily="serif-monospace"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:layout_margin="16dp"/>
+    
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RelojViewTest"
+        android:layout_margin="50dp"
+        android:text="                        WAKE UP, LAZYY!"
+        android:textColor="#000000"
+        android:id="@+id/MessageTextView"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saltar"
+        android:id="@+id/BotonSaltarAlarma"
+        android:layout_margin="50dp"
+        android:layout_below="@id/MessageTextView"
+        android:backgroundTint="#b3f16c" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posponer"
+        android:id="@+id/BotonPosponerAlarma"
+        android:layout_margin="50dp"
+        android:layout_below="@id/MessageTextView"
+        android:layout_alignParentRight="true"
+        android:backgroundTint="#d8f264" />
+
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" 
+            android:layout_margin="16dp"
+            android:text="Math Problem"
+            android:id="@+id/botonMathProblems"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorAccent"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Adivinar Numero"
+            android:id="@+id/botonAdivinaNumero"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorAccent"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Mini Game 2"
+            android:backgroundTint="@color/colorAccent"
+            android:id="@+id/botonMinigame"
+            android:layout_weight="1" />
+
+        
+        
+        
+    </LinearLayout>
+
+
+    
+    
+    
+    
+
+
+
+</RelativeLayout>

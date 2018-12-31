@@ -4,8 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorPrimaryDark"
-    card_view:cardBackgroundColor="@color/colorPrimaryDark"
-    card_view:cardCornerRadius="0dp">
+    card_view:cardBackgroundColor="@color/colorPrimary"
+    card_view:cardCornerRadius="3dp"
+    card_view:cardElevation="4dp"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:id="@+id/CardView">
+   <!-- -->
 
 
     <RelativeLayout
@@ -18,19 +23,19 @@
 
         <Button
             
-            android:id="@+id/botonHoraAlarma1"
+            android:id="@+id/botonHoraAlarmaItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:background="@color/colorPrimary"
-            android:text="0:00"
+            android:text="--:--"
             android:textSize="20dp" />
 
         <TextView
             android:id="@+id/repet_alarm1tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/botonHoraAlarma1"
+            android:layout_below="@id/botonHoraAlarmaItem"
             android:layout_margin="8dp"
             android:text="L,M,X,J,V" />
 

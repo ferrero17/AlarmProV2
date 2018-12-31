@@ -11,9 +11,58 @@ import java.util.concurrent.TimeUnit;
         public String name;
         public String timePick;
         public String dayRepeats;
-        boolean activa;
+        public boolean vibration;
+        public boolean activa;
 
+
+    public int getId() {
+        return id;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getTimePick() {
+        return timePick;
+    }
+
+    public void setTimePick(String timePick) {
+        this.timePick = timePick;
+    }
+
+    public String getDayRepeats() {
+        return dayRepeats;
+    }
+
+    public void setDayRepeats(String dayRepeats) {
+        this.dayRepeats = dayRepeats;
+    }
+
+    public boolean isVibration() {
+        return vibration;
+    }
+
+    public void setVibration(boolean vibration) {
+        this.vibration = vibration;
+    }
+
+    public boolean isActiva() {
+        return activa;
+    }
+
+    public void setActiva(boolean activa) {
+        this.activa = activa;
+    }
+}
 
 
 
