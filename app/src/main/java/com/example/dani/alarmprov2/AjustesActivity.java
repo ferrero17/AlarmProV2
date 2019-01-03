@@ -12,11 +12,11 @@ import android.widget.RelativeLayout;
 public class AjustesActivity extends AppCompatActivity {
 
 
-    private RelativeLayout loPadre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        themeUtils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_ajustes);
 
         Button btnFaqs = (Button) findViewById(R.id.botonFAQs);
@@ -32,14 +32,14 @@ public class AjustesActivity extends AppCompatActivity {
 
 //Cambio de Color el fondo de un activity.
 
-        loPadre = (RelativeLayout) findViewById(R.id.ActivityAjustesLayout);
 
         Button btncambiarAzul = (Button) findViewById(R.id.botonTemaAzul);
         btncambiarAzul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                loPadre.setBackgroundColor(Color.CYAN);
+                // loPadre.setBackgroundColor(Color.CYAN);
+                themeUtils.changeToTheme(AjustesActivity.this, themeUtils.BLUE);
 
             }
         });

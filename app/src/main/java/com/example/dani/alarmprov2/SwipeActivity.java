@@ -140,6 +140,7 @@ public class SwipeActivity  extends AppCompatActivity implements RepeatFragment.
     }
 
 
+
     public void onFragmentInteraction(Uri uri){
         //you can leave it empty
     }

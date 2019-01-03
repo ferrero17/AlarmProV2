@@ -9,9 +9,9 @@
     card_view:cardElevation="4dp"
     android:layout_margin="8dp"
     android:clickable="true"
+    android:longClickable="true"
     android:id="@+id/CardView">
    <!-- -->
-
 
     <RelativeLayout
         android:id="@+id/Alarma1"

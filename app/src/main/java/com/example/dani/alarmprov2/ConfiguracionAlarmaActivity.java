@@ -14,8 +14,6 @@ public class ConfiguracionAlarmaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuracion_alarma);
 
-
-
         Button btnGuardar = (Button) findViewById(R.id.botonGuardarCambios);
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,8 +26,6 @@ public class ConfiguracionAlarmaActivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
-
-
 
         Button button = (Button) findViewById(R.id.botonAjustesAlarma);
         button.setOnClickListener(new View.OnClickListener() {

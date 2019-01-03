@@ -22,7 +22,6 @@ public interface AlarmaDao {
     @Delete
     void delete (Alarma alarma);
     //
-
     @Query("UPDATE alarma SET timePick=:timePick WHERE name=:name")
     abstract void setTimePick(String name, String timePick);
 

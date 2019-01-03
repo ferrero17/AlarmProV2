@@ -1,11 +1,19 @@
 package com.example.dani.alarmprov2;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
@@ -13,13 +21,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+
+import com.avast.android.dialogs.fragment.SimpleDialogFragment;
 import com.bumptech.glide.Glide;
+import com.hudomju.swipe.OnItemClickListener;
+import com.hudomju.swipe.SwipeToDismissTouchListener;
+import com.hudomju.swipe.SwipeableItemClickListener;
+import com.hudomju.swipe.adapter.ListViewAdapter;
+import com.hudomju.swipe.adapter.RecyclerViewAdapter;
 
+import java.io.FileDescriptor;
+import java.io.PrintWriter;
 import java.util.Calendar;
 import java.util.List;
+
+import static android.widget.Toast.LENGTH_SHORT;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
@@ -45,6 +68,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder myViewHolder, int i) {
         Alarma alarma = list.get(i);
@@ -53,8 +77,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         //myViewHolder.alarmTimePick.setText(alarma.timePick);
 
-//Asignar eventos de los botones:
+    //Asignar eventos de los botones:
         myViewHolder.setOnClickListeners();
+
+        myViewHolder.setOnLongClickListeners();
+
+
 
 
     }
@@ -71,7 +99,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
+
+
+    class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
 
         private Switch alarmName;
         private Button alarmTimePick;
@@ -80,6 +111,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         Button btnConfiguracionAlarma;
         Button btnModificarHora;
         CardView cardView;
+        CardView cardViewPrueba;
        // EditText PickTime;
         //
         Button btnEliminarAlarma;
@@ -88,7 +120,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         Context context;
 
 
-        public MyViewHolder(@NonNull View itemView) {
+        public MyViewHolder(@NonNull final View itemView)  {
 
             super(itemView);
 
@@ -101,7 +133,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
              btnModificarHora = (Button) itemView.findViewById(R.id.botonHoraAlarmaItem);
              //
              cardView = (CardView) itemView.findViewById(R.id.CardView);
-
+             cardView.setLongClickable(true);
 
         }
 
@@ -112,6 +144,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             cardView.setOnClickListener(this);
 
         }
+
+        void setOnLongClickListeners(){
+
+            cardView.setOnLongClickListener(this);
+
+        }
+
+
+
+
 
         @Override
         public void onClick(View v) {
@@ -167,7 +209,46 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             recogerHora.show();
         }
 
+        @Override
+        public boolean onLongClick(final View v) {
 
+
+            switch (v.getId()){
+
+                case R.id.CardView:
+
+                    AlertDialog.Builder alert = new AlertDialog.Builder(v.getContext(), R.style.AlertaDialogo);
+                    LinearLayout layout = new LinearLayout(v.getContext());
+                    layout.setOrientation(LinearLayout.VERTICAL);
+                    layout.setGravity(LinearLayout.TEXT_ALIGNMENT_CENTER);
+                    LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                    lp.setMargins(50,50,50,50);
+                    layout.setLayoutParams(lp);
+                    alert.setTitle("Quieres eliminar la alarma?");
+                    alert.setView(layout);
+
+                    alert.setPositiveButton("ELIMINAR", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            list.remove(getAdapterPosition());
+                           // list.removeAll(list);
+                        }
+                    });
+
+                    alert.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            return;
+                        }
+                    });
+
+                    alert.show();
+            }
+
+            return false;
+        }
     }
 
 }

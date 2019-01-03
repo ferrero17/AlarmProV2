@@ -9,6 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
@@ -16,6 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildToolsVersion = '28.0.3'
 }
 
 dependencies {
@@ -39,4 +41,11 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.8.0' //Glide Libreria
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0' //Glide
 
+    implementation 'com.hudomju:swipe-to-dismiss-undo:1.0'
+    implementation 'com.avast:android-styled-dialogs:2.3.3'
+
+}
+
+repositories {
+    mavenCentral()
 }

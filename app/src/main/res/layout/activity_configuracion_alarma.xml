@@ -104,22 +104,13 @@
             android:layout_margin="8dp"
             />
 
-        <Button
-            android:id="@+id/botonBorrarAlarma"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:layout_below="@id/linea3"
-            android:layout_alignParentRight="true"
-            android:layout_margin="50dp"
-            android:text="borrar"
-            android:backgroundTint="@color/colorAccent"/>
 
         <Button
             android:id="@+id/botonGuardarCambios"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
+            android:layout_centerInParent="true"
             android:layout_below="@id/linea3"
             android:layout_margin="50dp"
             android:text="guardar"

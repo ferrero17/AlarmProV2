@@ -21,6 +21,7 @@
             android:text="¿Cómo configurar la hora de una alarma?"
             android:textSize="20dp"
             android:layout_margin="8dp"
+            android:textColor="#000000"
             />
 
         <TextView
@@ -40,7 +41,7 @@
             android:text="¿Cómo activo o desactivo una alarma?"
             android:textSize="20dp"
             android:layout_margin="8dp"
-            />
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/respuesta2"
@@ -55,7 +56,8 @@
             android:layout_height="wrap_content"
             android:text="¿Cómo Cambio el volumen de la alarma?"
             android:textSize="20dp"
-            android:layout_margin="8dp"/>
+            android:layout_margin="8dp"
+            android:textColor="#000000" />
 
         <TextView
             android:layout_width="match_parent"
@@ -70,12 +72,27 @@
             android:text="¿Cómo vuelvo a la pantalla anterior?"
             android:layout_margin="8dp"
             android:textSize="20dp"
+            android:textColor="#000000"
             />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="-Con la tecla/botón 'back' del dispositivo"
+            android:textSize="15dp"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Cómo elimino una alarma?"
+            android:textSize="20dp"
+            android:layout_margin="8dp"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-Manteniendo pulsada la alarma que quieras eliminar de la lista"
             android:textSize="15dp"
             android:layout_margin="8dp"/>
 
