@@ -9,38 +9,50 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" android:label="AlarmPro">
+        <activity
+            android:name=".MainActivity"
+            android:label="AlarmPro">
+           <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".NewAlarmActivity"
+            android:label="Añadir Alarma" />
+        <activity
+            android:name=".ShowActivity"
+            android:label="Mi Alarma" />
+        <activity android:name=".ConfiguracionAlarmaActivity" />
+        <activity
+            android:name=".AjustesActivity"
+            android:label="Ajustes" />
+        <activity
+            android:name=".FaqsActivity"
+            android:label="FAQ&apos;S" />
+        <activity
+            android:name=".SwipeActivity"
+            android:label="@string/title_activity_swipe"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PickersActivity" />
+        <activity
+            android:name=".MathProblemsActivity"
+            android:label="Math Problems" />
+        <activity
+            android:name=".AdivinarNumeroActivity"
+            android:label="MiniGame 1" />
+        <activity
+            android:name=".MiniGame2Activity"
+            android:label="MiniGame2"></activity>
+        <activity android:name=".ChargingActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".NewAlarmActivity"
-                  android:label="Añadir Alarma"/>
 
-        <activity android:name=".ShowActivity"
-            android:label="Mi Alarma"/>
-
-        <activity android:name=".ConfiguracionAlarmaActivity" />
-
-        <activity android:name=".AjustesActivity"
-            android:label="Ajustes"/>
-
-        <activity android:name=".FaqsActivity"
-            android:label="FAQ'S"/>
-
-        <activity
-            android:name=".SwipeActivity"
-            android:label="@string/title_activity_swipe"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".PickersActivity" />
-        <activity android:name=".MathProblemsActivity"
-            android:label="Math Problems"/>
-        <activity android:name=".AdivinarNumeroActivity"
-            android:label="MiniGame 1"/>
-        <activity android:name=".MiniGame2Activity" android:label="MiniGame2">
         </activity>
     </application>
 

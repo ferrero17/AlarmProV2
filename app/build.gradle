@@ -42,7 +42,8 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0' //Glide
 
     implementation 'com.hudomju:swipe-to-dismiss-undo:1.0'
-    implementation 'com.avast:android-styled-dialogs:2.3.3'
+    implementation 'com.avast:android-styled-dialogs:2.3.3' //Dialogs
+    implementation 'com.github.ybq:Android-SpinKit:1.2.0'//PantallaCarga
 
 }
 
