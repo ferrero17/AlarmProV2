@@ -26,7 +26,7 @@ public class NewAlarmActivity extends AppCompatActivity {
 
                 Alarma alarma = new Alarma();
 
-                    alarma.name = alarmaDadaNombre;
+                alarma.name = alarmaDadaNombre;
 
                 AlarmaViewModel alarmaViewModel = ViewModelProviders.of(NewAlarmActivity.this).get(AlarmaViewModel.class);
                 alarmaViewModel.insertAlarma(alarma);
